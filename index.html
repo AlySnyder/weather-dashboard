@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    
+<h1 class="header1">Weather Dashboard</h1>
+<div class="container">
+    <div class="row">
+        <aside class="col-lg-3 pb-3">
+            <h2 class="mt-2">Search for a City</h2>
+            <form class="Search" id="Search">
+                <div class="search-group">
+                    <input class="input-search" type="text" id="input-search" placeholder="Miami"/>
+                    <div class="search-group-append">
+                        <button type="submit" class="btn search-btn" id="search-btn">Search</button>
+                        <hr/>
+                        <hr/>
+                    </div>
+                </div>
+            </form>
+            <div class="list-group" id="list-group">
+
+            </div>
+        </aside>
+        <div class="col-lg-9 pb-3">
+            <section id="current" class="mt-2"></section>
+            <section id="five-day-forecast" class="row mt-2"></section>
+
+        </div>
+    </div>
+</div>
+  
+<script scr="https://momentjs.com/downloads/moment.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
