@@ -1,4 +1,7 @@
 .header1 {
+font-size: 40px;
 text-align: center;
 justify-content: center;
+border-style: double;
+background-color: lightblue;
 }
