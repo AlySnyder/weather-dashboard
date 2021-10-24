@@ -1,13 +1,7 @@
-'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=6eb8aa1a8a913c3b40a8fdee22427620'
-
-
-let baseapiurl = "https://api.openweathermap.org"
-let myApiKey = "6eb8aa1a8a913c3b40a8fdee22427620"
+const baseapiurl = "https://api.openweathermap.org"
+const myApiKey = "6eb8aa1a8a913c3b40a8fdee22427620"
 let search = document.getElementById("search-btn");
 let input_search = document.querySelector("#input-search");
-let current = document.querySelector("#current");
-let five_day_forcast = document.querySelector("#five-day-forecast");
-let list_group = document.querySelector("#list-group");
 
 
 function searchClicked(e) {
@@ -17,6 +11,7 @@ function searchClicked(e) {
     console.log("searchSubmitted")
     performSearch(city)
 }
+
 
 function performSearch(city) {
     fetch(`${baseapiurl}/data/2.5/weather?q=${city}&units=imperial&appid=${myApiKey}`)
@@ -34,6 +29,7 @@ function performSearch(city) {
         });
 }
 
+
 function addSearchHistory(value) {
     var history = JSON.parse(localStorage.getItem("weatherHistory"));
     if (!history) {
@@ -44,6 +40,7 @@ function addSearchHistory(value) {
     localStorage.setItem("weatherHistory", JSON.stringify(history));
     loadSearchHistory()
 }
+
 
 function loadSearchHistory() {
     let searchHistory = document.getElementById("search-history")
