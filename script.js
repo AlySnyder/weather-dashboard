@@ -11,6 +11,7 @@ function searchClicked(e) {
     console.log("searchSubmitted")
     performSearch(city)
 }
+search.addEventListener("click", searchClicked);
 
 
 function performSearch(city) {
@@ -155,8 +156,5 @@ function displayForecast(data) {
     }
 }
 
-
-search.addEventListener("click", searchClicked);
-console.log("listenerForSearchButtonAdded")
 
 loadSearchHistory()
